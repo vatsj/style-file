@@ -1,0 +1,170 @@
+\ProvidesPackage{jstav}
+
+% ~~~ CONFIGURATION ~~~
+
+% ~ paragraph breaks ~
+%  (upon skipping a line of TeX)
+
+% no paragraph indent
+\setlength{\parindent}{0em}
+
+% vertical spacing on paragraph break
+\setlength{\parskip}{0.75em}
+
+% ~ page geometry ~
+
+% enforces 1-inch page margins
+\usepackage[margin=1in]{geometry}
+
+% ~~~ PACKAGE IMPORTS ~~~
+
+% ~ non-math ~
+
+% for comment env
+\usepackage{comment}
+
+% for hyperlinks
+\usepackage{hyperref}
+
+% coding envs
+\usepackage{verbatim}
+
+% for \enumerate command
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+% for displaying svg images
+\usepackage{svg}
+
+% custom fonts/emphasis
+
+% strikethrough = \st
+\usepackage{soul}
+
+% ~ math p
+
+% standard ams pkgs
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% tikz + tikzcd
+\usepackage{tikz}
+\usetikzlibrary{cd}
+
+% math fonts
+
+% less brittle \mathbb
+\usepackage{bbm}
+
+% ~~~ MACROS ~~~
+
+% ~ fonts ~
+% https://www.overleaf.com/learn/latex/Mathematical_fonts
+
+% shortcuts to math fonts
+% \newcommand{\mrm}[1]{\mathrm{#1}}
+
+% bold font
+\newcommand{\mbf}[1]{\mathbf{#1}}
+
+% blackboard bold + bbm
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mbbm}[1]{\mathbbm{#1}}
+
+% curlicue font for group/set theory
+\newcommand{\mc}[1]{\mathcal{#1}}
+
+% wacko mathematical logic font
+% https://en.wikipedia.org/wiki/Fraktur
+\newcommand{\mf}[1]{\mathfrak{#1}}
+
+% ~ theorem envs ~ 
+
+% theorem-like envs from amsthm
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}[theorem]
+\newtheorem{remark}{Remark}[theorem]
+
+% shorthands (defined to) lack section numbering
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{rmk}{Remark}
+\newtheorem*{dfn}{Definition}
+
+
+% ~ mathematical objects ~
+
+% common numerical sets
+% naturals, integers, rationals, reals, complex
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% real + complex projective space
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\CP}{\mathbb{CP}}
+
+% ~ mathematical functions/operators ~
+
+% abstract algebra
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\Ran}{Ran}
+
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Img}{Img}
+
+\DeclareMathOperator{\id}{id}
+
+% types of morphisms
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+
+% linear algebra
+\DeclareMathOperator{\rk}{rk}
+
+% magnitude
+% (generally notates a vector space norm)
+\newcommand{\mg}[1]{\vert #1 \vert}
+
+% inner product
+\newcommand{\ip}[2]{\langle #1, #2 \rangle}
+
+% measure/probability theory
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\prob}{Pr}
+
+% random variables
+\DeclareMathOperator{\Unif}{Unif}
+\DeclareMathOperator{\Ber}{Ber}
+\DeclareMathOperator{\Bin}{Bin}
+\DeclareMathOperator{\Geom}{Geom}
+\DeclareMathOperator{\Poi}{Poi}
+
+\DeclareMathOperator{\normal}{\mc N}
+
+% boldface 1: overloaded notation w multiple uses
+% indicator fn, ones vector, ...
+\newcommand{\one}{\mathbbm{1}}
+
+% calculus/analysis
+
+% TOTAL derivative operator w respect to argument
+\newcommand{\dd}[1]{\frac {d} {d #1}}
+
+% PARTIAL derivative operator w respect to argument
+\newcommand{\pp}[1]{\frac {\partial} {\partial#1}}
+
+% general use
+
+% floor + ceil
+\newcommand{\fl}[1]{\lfloor #1 \rfloor}
+\newcommand{\cl}[1]{\lceil #1 \rceil}

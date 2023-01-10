@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+% \usepackage[utf8]{inputenc}
+
+\usepackage{jstav}
+
+% specifies doc title
+\title{Personal \LaTeX Style File}
+\author{Jacob Stavrianos}
+
+% begin the document
+\begin{document}
+
+% actually insert the title.
+\maketitle
+
+\section*{Overview}
+This project provides a general-purpose style file to be imported into other overleaf projects. Overleaf supports sharing files from other projects, live-syncing upon changes to the original project. It \textit{doesn't} conveniently support links to auxiliary files in the original project. so I chose to write the entire project into a single, monolithic style file.
+
+The file \texttt{jstav.sty} provides the package \texttt{jstav}, which can be both shared to other projects and imported (within a project) to \texttt{.tex} or \texttt{.sty} files. It incorporates all the packages, macros, and formatting I'm used to writing latex with. The style file can't be edited in different projects, but can be overwritten by a wrapper style file.
+
+\section*{Usage}
+
+\begin{itemize}
+    \item [Overleaf: ] Import \texttt{jstav.sty} via the ``upload'' icon in the top-left corner.
+    \item [Raw TeX: ] Treat \texttt{jstav.sty} as a textfile that, when compliled as TeX, provides the \texttt{jstav} package. Practically speaking, download \texttt{jstav.sty} to the desired directory (somewhere in the package path) and import \texttt{jstav} as normal.
+\end{itemize}
+
+To include the \texttt{jstav} package as style, use the following TeX command: \texttt{\textbackslash usepackage\{jstav\}}
+
+\end{document}
